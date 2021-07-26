@@ -201,14 +201,9 @@
                                 <span class="carousel-control-next-icon"></span>
                                 <span class="sr-only">Next</span>
                             </a>
-                            <div class="btn-group" id="carouselButton">
-                                <button class="btn btn-danger btn-sm" id="carouselPause">
+                                <button class="btn btn-danger btn-sm" id="carouselButton">
                                     <i class="fa fa-pause"></i>
                                 </button>
-                                <button class="btn btn-danger btn-sm" id="carouselPlay">
-                                    <i class="fa fa-play"></i>
-                                </button>
-                            </div>
                     </div>
                 </div>
             </div>
@@ -297,17 +292,22 @@
     </footer>
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script> 
         
-<!--carousel buttons jquery-->
+<!--carousel Pause/Play buttons script part 2-->
     <script>
         $(function () {
-            $(".carousel").carousel({ interval: 2000 }); //sets cycle interval 2000ms or 2 seconds
-            $("#carouselPause").click(function () { //states the function to run when #carouselPause is clicked
-                $(".carousel").carousel("pause"); //function for the pause button/targets the id and allows the button to pause
-            });
-            $("#carouselPlay").click(function () { //states the function to run when #carouselPlay is clicked
-                $(".carousel").carousel("cycle"); //function that allows the play button to cycle throught he carousel items again
+            $(".carousel").carousel({ interval: 2000 });
+            $("#carouselButton").click(function () {
+                if ($("#carouselButton").children("i").hasClass("fa-pause")) {
+                    $(".carousel").carousel("pause");
+                    $("#carouselButton").children("i").removeClass("fa-pause");
+                    $("#carouselButton").children("i").addClass("fa-play");
+                } else {
+                    $(".carousel").carousel("cycle");
+                    $("#carouselButton").children("i").removeClass("fa-play");
+                    $("#carouselButton").children("i").addClass("fa-pause");
+                }
             });
         });
     </script>
