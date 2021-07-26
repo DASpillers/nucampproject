@@ -1,0 +1,106 @@
+$color-primary: #3046C5;
+$color-secondary: #5637dd;
+$color-pale: #CEC8FF;
+$color-mid: #901CAD;
+$color-dark: #60106b;
+$color-black-transparent: rgba(0, 0, 0, 0.5);
+
+$body-font: "Open Sans", sans-serif;
+$header-font: "Lobster", cursive;
+
+body {
+font-family: $body-font;
+}
+
+h1, h2, h3 {
+font-family: $header-font;
+}
+
+h2 {
+    $color-primary: #3046C5;
+}
+
+header {
+    h2 {
+        color: $color-pale;
+    }
+}
+
+.site-footer {
+background-image: linear-gradient($color-pale, white);
+padding: 20px 0;
+}
+
+.jumbotron {
+margin: 0;
+padding: 30px;
+background-image: linear-gradient(to right, $color-secondary, $color-primary, $color-dark);
+color: white;
+}
+
+.row-content {
+padding: 50px 0;
+border-bottom: 1px ridge;
+min-height: 200px;
+}
+
+.navbar {
+background-color: $color-mid;
+}
+
+.tab-content {
+border: 1px solid #ddd;
+border-top: none;
+padding: 10px;
+}
+
+.card-header a {
+border-radius: 8px;
+color: #fff;
+width: 100%;
+
+}
+
+small {
+font-size: 13px;
+font-style: italic;
+}
+
+.card-header {
+max-width: 100%;
+max-height: auto;
+text-align: left;
+background-color: #60106B;
+margin-top: 1em;
+text-align: center;
+}
+
+.card-header a:hover {
+text-decoration: none;
+}
+
+.accordionHeader {
+margin-bottom: .5em;
+max-width: 100%;
+text-align: left;
+}
+
+.card-body {
+font-family: "Lobster", cursive;
+}
+
+
+.carousel-caption {
+    background-color: $color-black-transparent;
+}
+
+.carousel {
+    border: solid $color-secondary;
+}
+
+#carouselButton {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+}

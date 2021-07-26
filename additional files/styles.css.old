@@ -1,0 +1,92 @@
+body {
+font-family: "Open Sans", sans-serif;
+}
+
+h1, h2, h3 {
+font-family: "Lobster", cursive;
+}
+
+h2 {
+color: #3046c5;
+}
+header h2 {
+color: #cec8ff;
+}
+.site-footer {
+background-image: linear-gradient(#cec8ff, white);
+padding: 20px 0;
+}
+
+.jumbotron {
+margin: 0;
+padding: 30px;
+background-image: linear-gradient(to right, #5637dd, #3046c5, #60106B);
+color: white;
+}
+
+.row-content {
+padding: 50px 0;
+border-bottom: 1px ridge;
+min-height: 200px;
+}
+
+.navbar {
+background-color: #901CAD;
+}
+
+.tab-content {
+border: 1px solid #ddd;
+border-top: none;
+padding: 10px;
+}
+
+.card-header a {
+border-radius: 8px;
+color: #fff;
+width: 100%;
+
+}
+
+small {
+font-size: 13px;
+font-style: italic;
+}
+
+.card-header {
+max-width: 100%;
+max-height: auto;
+text-align: left;
+background-color: #60106B;
+margin-top: 1em;
+text-align: center;
+}
+
+.card-header a:hover {
+text-decoration: none;
+}
+
+.accordionHeader {
+margin-bottom: .5em;
+max-width: 100%;
+text-align: left;
+}
+
+.card-body {
+font-family: "Lobster", cursive;
+}
+
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.carousel {
+    border: solid #5637DD;
+}
+
+#carouselButton {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+}
