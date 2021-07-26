@@ -159,7 +159,7 @@
     </div>
 
     <div class="container">
-
+<!--CAROUSEL-->
         <div class="row row-content">
             <div class="col-md-8 mx-auto">
                 <div id="homeCarousel" class="carousel slide" data-ride="carousel">
@@ -201,6 +201,14 @@
                                 <span class="carousel-control-next-icon"></span>
                                 <span class="sr-only">Next</span>
                             </a>
+                            <div class="btn-group" id="carouselButton">
+                                <button class="btn btn-danger btn-sm" id="carouselPause">
+                                    <i class="fa fa-pause"></i>
+                                </button>
+                                <button class="btn btn-danger btn-sm" id="carouselPlay">
+                                    <i class="fa fa-play"></i>
+                                </button>
+                            </div>
                     </div>
                 </div>
             </div>
@@ -291,7 +299,18 @@
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
         
-
+<!--carousel buttons jquery-->
+    <script>
+        $(function () {
+            $(".carousel").carousel({ interval: 2000 }); //sets cycle interval 2000ms or 2 seconds
+            $("#carouselPause").click(function () { //states the function to run when #carouselPause is clicked
+                $(".carousel").carousel("pause"); //function for the pause button/targets the id and allows the button to pause
+            });
+            $("#carouselPlay").click(function () { //states the function to run when #carouselPlay is clicked
+                $(".carousel").carousel("cycle"); //function that allows the play button to cycle throught he carousel items again
+            });
+        });
+    </script>
 
 </body>
 
